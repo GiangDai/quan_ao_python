@@ -68,9 +68,9 @@
                                     </td>
                                     <td class="total text-center"><strong class="primary-color">
                                         {% if rs.product.variant == 'None' %}
-                                            {{ rs.amount |floatformat:3|intcomma}}
+                                            {{ rs.amount |floatformat:3}}
                                         {% else %}
-                                            {{ rs.varamount |floatformat:3|intcomma}}
+                                            {{ rs.varamount |floatformat:3}}
                                         {% endif %}
                                     </strong></td>
                                     <td class="text-right"><a href="/order/deletefromcart/{{ rs.id }}" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm?')" class="main-btn icon-btn"><i class="fa fa-close"></i></a></td>
@@ -83,17 +83,18 @@
                             <tr>
                                 <th class="empty" colspan="3"></th>
                                 <th>TỔNG TIỀN</th>
-                                <th colspan="2" class="sub-total">{{ total |floatformat:3|intcomma}} VND</th>
+                                <th colspan="2" class="sub-total">{{ total | floatformat:3 }} VND</th>
+                                
                             </tr>
                             <tr>
                                 <th class="empty" colspan="3"></th>
                                 <th>PHÍ SHIP</th>
-                                <td colspan="2">Free Shipping</td>
+                                <td colspan="2">Miễn phí</td>
                             </tr>
                             <tr>
                                 <th class="empty" colspan="3"></th>
                                 <th>ĐƠN GIÁ</th>
-                                <th colspan="2" class="total">{{ total |floatformat:3|intcomma}} VND</th>
+                                <th colspan="2" class="total">{{ total |floatformat:3}} VND</th>
                             </tr>
                             </tfoot>
                         </table>
